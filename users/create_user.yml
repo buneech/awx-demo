@@ -5,7 +5,7 @@
   tasks:
     - name: Create user "{{ user }}"
       user: 
-        name: "{{ name }}"
+        name: "{{ user }}"
         password: "{{ password }}"
         groups: "{{ group }}"
         createhome: yes
