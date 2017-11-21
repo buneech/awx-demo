@@ -5,7 +5,7 @@
   <style>
    div {
     height: 200px;
-    width: 400px;
+    width: 600px;
 
     position: fixed;
     top: 50%;
@@ -16,7 +16,7 @@
   </style>
  </head>
  <body bgcolor="#81d4f7">
-  <div><span style="color: white; font-family: arial; font-weight: bold; font-size: 60px;">
+  <div><span style="color: white; font-family: arial; font-weight: bold; font-size: 100px;">
    <?php echo gethostname(); ?>
   </span></div>
  </body>
