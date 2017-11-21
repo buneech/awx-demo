@@ -1,0 +1,12 @@
+---
+- hosts: all
+  remote_user: root
+  sudo: yes
+
+  tasks:
+    - yum: name=httpd state=latest
+    - service: name=httpd state=started
+    - yum: name=php state=latest
+    - service: name=httpd state=restarted
+    - copy: src=index.php dest=/var/www/html
+
