@@ -4,7 +4,7 @@
 
   tasks:
     - user: 
-        name: {{name}}
-        password: {{password}}
-        groups: {{group}}
+        name: "{{name}}"
+        password: "{{password}}"
+        groups: "{{group}}"
         createhome: yes
