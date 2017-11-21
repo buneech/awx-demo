@@ -3,7 +3,8 @@
   become: yes
 
   tasks:
-    - user: 
-        name: "{{name}}"
+    - name: Remove user "{{ user }}"
+      user: 
+        name: "{{ name }}"
         state: absent
         remove: yes

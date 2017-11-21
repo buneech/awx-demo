@@ -3,8 +3,9 @@
   become: yes
 
   tasks:
-    - user: 
-        name: "{{name}}"
-        password: "{{password}}"
-        groups: "{{group}}"
+    - name: Create user "{{ user }}"
+      user: 
+        name: "{{ name }}"
+        password: "{{ password }}"
+        groups: "{{ group }}"
         createhome: yes
