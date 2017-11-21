@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - user: 
+        name: {{name}}
+        password: {{password}}
+        groups: {{group}}
+        createhome: yes
