@@ -16,6 +16,8 @@
   </style>
  </head>
  <body bgcolor="#81d4f7">
- <?php '<div><span style="color: white; font-family: arial; font-weight: bold; font-size: 60px;">' echo gethostname(); '</span></div>' ?> 
+  <div><span style="color: white; font-family: arial; font-weight: bold; font-size: 60px;">
+   <?php echo gethostname(); ?>
+  </span></div>
  </body>
 </html>
