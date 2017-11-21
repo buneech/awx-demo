@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - yum: 
+        name: httpd
+        state: absent
+    - yum: 
+        name: php 
+        state: absent
+    - file: 
+        path: /var/www/html/index.php
+        state: absent
+
