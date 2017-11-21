@@ -3,25 +3,31 @@
   become: yes
 
   tasks:
-    - yum: 
+    - name: Install HTTPD via YUM
+      yum: 
         name: httpd
         state: latest
-    - service: 
+    - name: Start HTTPD service
+      service: 
         name: httpd
         state: started
-    - lineinfile: 
+    - name: Replace Listen directive in httpd.conf to 0.0.0.0:80
+      lineinfile: 
         dest: /etc/httpd/conf/httpd.conf
         regexp: "^Listen"
         line: "Listen 0.0.0.0:80"
         state: present
         backrefs: yes
-    - yum: 
+    - name: Install PHP via YUM
+      yum: 
         name: php 
         state: latest
-    - service: 
+    - name: Restart HTTPD service
+      service: 
         name: httpd
         state: restarted
-    - copy: 
+    - name: Copy PHP file to /var/www/html
+      copy: 
         src: index.php
         dest: /var/www/html
 

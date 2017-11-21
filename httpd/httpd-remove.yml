@@ -3,13 +3,16 @@
   become: yes
 
   tasks:
-    - yum: 
+    - name: Remove HTTPD via YUM
+      yum: 
         name: httpd
         state: absent
-    - yum: 
+    - name: Remove PHP via YUM
+      yum: 
         name: php 
         state: absent
-    - file: 
+    - name: Delete PHP file from /var/www/html
+      file: 
         path: /var/www/html/index.php
         state: absent
 
